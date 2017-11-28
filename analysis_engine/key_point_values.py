@@ -9045,7 +9045,7 @@ class EngTorqueOverThresholdDuration(KeyPointValueNode):
     NAME_VALUES = {'period': ['Takeoff Power', 'MCP', 'Go Around Power']}
     units = ut.SECOND
 
-    @classmetho
+    @classmethod
     def can_operate(cls, available, eng_series=A('Engine Series'), eng_type=A('Engine Type'),
                     mods=A('Modifications'), ac_type=A('Aircraft Type')):
         try:
