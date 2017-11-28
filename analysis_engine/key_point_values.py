@@ -9045,7 +9045,7 @@ class EngTorqueOverThresholdDuration(KeyPointValueNode):
     NAME_VALUES = {'period': ['Takeoff Power', 'MCP', 'Go Around Power']}
     units = ut.SECOND
 
-    @classmethod
+    @classmetho
     def can_operate(cls, available, eng_series=A('Engine Series'), eng_type=A('Engine Type'),
                     mods=A('Modifications'), ac_type=A('Aircraft Type')):
         try:
@@ -9074,10 +9074,10 @@ class EngTorqueOverThresholdDuration(KeyPointValueNode):
         return base and heli_additions
 
     def derive(self,
-               eng1=M('Eng (1) Torque'),
-               eng2=M('Eng (2) Torque'),
-               eng3=M('Eng (3) Torque'),
-               eng4=M('Eng (4) Torque'),
+               eng1=P('Eng (1) Torque'),
+               eng2=P('Eng (2) Torque'),
+               eng3=P('Eng (3) Torque'),
+               eng4=P('Eng (4) Torque'),
                takeoff=S('Takeoff 5 Min Rating'),
                mcp=S('Maximum Continuous Power'),
                go_around=S('Go Around 5 Min Rating'),
